@@ -5,8 +5,9 @@ const [
   INTRO,
   PLAY,
   DEAD,
-  OVER
-] = [0,1,2,3,4]; //阶段枚举值
+  OVER,
+  RANK
+] = [0,1,2,3,4,5]; //阶段枚举值
 /**
  * 全局状态管理器
  */
@@ -44,4 +45,7 @@ export default class DataBus {
     this.phase =OVER;
   }
 
+  goToRank() {
+    this.phase = RANK;
+  }
 }
